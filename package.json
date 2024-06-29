@@ -1,4 +1,15 @@
 {
-  "name": "spt",
-  "packageManager": "yarn@4.3.0"
+  "name": "hosted-spt",
+  "packageManager": "yarn@4.3.0",
+  "scripts": {
+    "synth": "cdk synth",
+    "deploy": "./deploy.sh"
+  },
+  "dependencies": {
+    "@types/node": "20.14.6",
+    "aws-cdk": "2.146.0",
+    "aws-cdk-lib": "2.146.0",
+    "constructs": "10.3.0",
+    "typescript": "5.4.5"
+  }
 }

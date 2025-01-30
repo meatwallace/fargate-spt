@@ -1,5 +1,7 @@
 # Fargate + SPT
 
+:information_source: **Current Version: 3.10.5**
+
 [SPT (Single Player Tarkov)](https://sp-tarkov.com/) hosted via [AWS Fargate](https://aws.amazon.com/fargate/), deployed using [CDK](https://aws.amazon.com/cdk/).
 
 I recommend setting up with [mod-sync](https://github.com/c-orter/modsync).

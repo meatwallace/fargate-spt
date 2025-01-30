@@ -7,4 +7,4 @@ cp -R /server/_mods/user/mods /server/user/mods
 
 echo "Starting SPT backend server"
 
-./Aki.Server.exe
+./SPT.Server.exe

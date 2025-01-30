@@ -5,10 +5,8 @@ FROM node:$NODE AS builder
 # convenience
 SHELL ["/bin/bash", "-c"]
 
-ARG SPT_REF=3.8.3
+ARG SPT_REF=3.10.5
 ARG SPT_BRANCH=master
-ARG FIKA_REF=HEAD^
-ARG FIKA_BRANCH=main
 
 WORKDIR /server
 
@@ -31,7 +29,7 @@ RUN \
   npm install && \
   npm run build:release -- --arch=$([ "$(uname -m)" = "aarch64" ] && echo arm64 || echo x64) --platform=linux && \
   mv build/* /server/ && \
-  sed -i 's/127.0.0.1/0.0.0.0/g' /server/Aki_Data/Server/configs/http.json && \
+  sed -i 's/127.0.0.1/0.0.0.0/g' /server/SPT_Data/Server/configs/http.json && \
   rm -rf /server/spt-source/
 
 # final image

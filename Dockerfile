@@ -32,6 +32,14 @@ RUN \
   sed -i 's/127.0.0.1/0.0.0.0/g' /server/SPT_Data/Server/configs/http.json && \
   rm -rf /server/spt-source/
 
+# grab modsync updater executable
+RUN \
+  wget https://github.com/c-orter/ModSync/releases/download/v0.10.2/Corter-ModSync-v0.10.2.zip -O modsync.zip && \
+  unzip modsync.zip -d /server/_modsync && \
+  mv /server/_modsync/ModSync.Updater.exe /server/ && \
+  rm modsync.zip && \
+  rm -rf /server/_modsync
+
 # final image
 FROM ubuntu:latest
 
